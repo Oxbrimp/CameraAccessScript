@@ -19,16 +19,15 @@ while True:
     # Run object detection
     results = model(frame)
 
-    # Visualize the results on the frame
+    # Visualise the results on the frame
     annotated_frame = results[0].plot()
 
     # Display the frame
     cv2.imshow("YOLOv8 Detection", annotated_frame)
 
-    # Exit when 'q' is pressed
+    # To exit please just press 'q'
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
-# Release everything
+# Release everything...
 cap.release()
 cv2.destroyAllWindows()
